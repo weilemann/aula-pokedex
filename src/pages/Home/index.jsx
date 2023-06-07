@@ -41,7 +41,7 @@ export function Home() {
                                     <div className="pokeCard" key={pokemon.id}>
                                         <img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.newId}.png`} alt={pokemon.name.english} />
                                         <h3>{pokemon.name.english}</h3>
-                                        <span>{pokemon.type[0]}</span>
+                                        <span>{pokemon.type.length > 1 ? `${pokemon.type[0]} | ${pokemon.type[1]}` : pokemon.type}</span>
                                     </div>
                                 )
                             })
